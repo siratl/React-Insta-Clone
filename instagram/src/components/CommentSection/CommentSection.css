@@ -1,0 +1,69 @@
+.commentTextContainer {
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    margin: 0 auto;
+ 
+}
+
+.commentInput {
+    width: 63%;
+    padding: 11px;
+    border-radius: 3px;
+    margin: 15px 0 30px 0;
+    font-size: 15px;
+}
+
+.commentText {
+    display: flex;
+    flex-direction: row;
+}
+
+.commentText .username {
+    font-weight: 650;
+    font-size: 15px;
+    padding: 3px 0 3px 7px;
+    margin-left: 10px;
+}
+
+.commentText .comment {
+    padding: 3px 0 3px 0;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.likesContainer {
+    width: 640px;
+    margin: 0 auto;
+    display: flex;
+    
+}
+.likes {
+    width: 640px;
+    margin: 0 auto;
+    font-weight: 650;
+    display: flex;
+    padding: 7px 0 7px 7px;
+    margin-left: 10px;
+}
+
+.likeCommentWrapper {
+    width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: -10px;
+    margin-top: -2px;
+}
+
+.commentIcon {
+    width: 45px;
+    margin-top: 2px;
+}
+
+.likeIcon {
+    width: 35px;
+    margin: 5px 0px 5px 8px;
+    
+}
