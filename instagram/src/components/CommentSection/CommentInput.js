@@ -1,18 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Form, Input } from 'reactstrap';
+import './CommentSection.css';
 
+const CommentInput = (props) => {
+    return (
+        <Form className="comment-form" onSubmit={props.sumbit}>
+            <Input 
+                className="comment-input" 
+                placeholder="Add a comment..." 
+                value={props.value} 
+                onChange={props.onValueChange}
+            />
+            <i className="fas fa-ellipsis-h"></i>
+        </Form>
+    )
+}
 
-const CommentInput = props => {
-  return (
-    <form onSubmit={props.addNewComment} >
-      <input 
-      value={props.inputText}
-      className="commentInput" 
-      placeholder="Add comment..." 
-      type="text"
-      onChange={props.handleChange}
-      />
-    </form>
-  );
+CommentInput.propTypes = {
+    value: PropTypes.string,  
+    onValueChange: PropTypes.func,
+    sumbit: PropTypes.func    
 };
 
 export default CommentInput;

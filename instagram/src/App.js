@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
-import './App.css';
 import PostsContainer from './components/PostsContainer/PostsContainer';
 import SearchBarContainer from './components/SearchBar/SearchBarContainer';
-
+import './App.css';
 class App extends Component {
   constructor() {
     super();

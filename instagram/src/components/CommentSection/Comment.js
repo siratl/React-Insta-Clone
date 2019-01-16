@@ -1,24 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { CardText } from 'reactstrap';
+import './CommentSection.css';
 
-
-const Comment = props => {
+const Comments = props => {
   return (
-    <div className='commentTextContainer'>
-        <div className='commentText'>
-            <p className="username">{props.comment.username}</p>
-            <p className="comment">{props.comment.text}</p>{' '}
-        </div>
-      
+    <div className='commentWrapper'>
+      {props.comments.map(comment => {
+        return (
+            <CardText key={comment.text} className='commentText'>
+                <p className="username">{comment.username}</p>
+                {comment.text}
+            </CardText>
+        );
+      })}
     </div>
   );
 };
 
-Comment.propTypes = {
-  comment: PropTypes.shape({
-    text: PropTypes.string,
-    username: PropTypes.string,
-  }),
+Comments.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      text: PropTypes.string,
+    }),
+  ),
 };
 
-export default Comment;
+export default Comments;
