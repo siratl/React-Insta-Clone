@@ -23,14 +23,14 @@
 
 
 .searchInput input {
-    border: 1px solid grey;
+    border: 1px solid rgb(185, 185, 185);
     width: 215px;
     margin-top: 23px;
     height: 30px;
     padding: 10px;
     border-radius: 4px;
     text-align: center;
-    background-color: beige;
+    background-color: rgb(240, 240, 240);
 }
 
 .iconsWrapper {
@@ -46,21 +46,23 @@
 .cameraImg img{
     width: 35px;
     margin-left: 5px;
+    margin-right: 10px;
 }
 
 .logoImg img {
     width: 125px;
     padding-left: 18px;
     border-left: 1px solid black;
+
 }
 
 .icon img{
-    width: 60%;
-
+    width: 33px;
+    margin-right: 10px;
 }
 
-.exploreIcon {
-    width: 38px;
-    margin-right: 2px;
+.exploreIcon img{
+    width: 25px;
+    margin-right: 17px;
     padding-bottom: 2px;
 }

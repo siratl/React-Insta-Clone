@@ -9,8 +9,28 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments,
+      inputText: '',
     };
   }
+
+  handleChange = (ev) => { 
+    this.setState({inputText: ev.target.value})
+  }
+
+  addNewComment = (ev) => {
+    ev.preventDefault()
+
+    const newComments = {
+      username: 'sirATL',
+      text: this.state.inputText,
+    }
+    this.state.comments.push(newComments)
+    this.setState({
+      comments: this.state.comments,
+      inputText: ''
+    })
+  };
+ 
 
   render() {
     return (

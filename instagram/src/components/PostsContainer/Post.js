@@ -5,7 +5,7 @@ import CommentSection from '../CommentSection/CommentSection'
 import Likes from '../CommentSection/Likes'
 import CommentIcon from '../../img/Comment.png'
 import Heart from '../../img/heartIcon.png'
-import dummyData from '../../dummy-data';
+
 
 class Post extends React.Component {
   constructor(props) {
@@ -34,11 +34,11 @@ likeToggle = () => {
           thumbnailUrl={this.state.posts.thumbnailUrl}
         />
         <div>
-          <img className='postImg' alt='Post Image' src={this.state.posts.imageUrl} />
+          <img className='postImg' alt='Picturepost' src={this.state.posts.imageUrl} />
         </div>
         <div className='likeCommentWrapper'>
-          <img onClick={this.likeToggle} className='heartIcon likeIcon' src={Heart} />
-          <img className='commentIcon' alt='Comment Icon' src={CommentIcon}/>
+          <img onClick={this.likeToggle} alt='like button' className='heartIcon likeIcon' src={Heart} />
+          <img className='commentIcon' alt='Comment clicker' src={CommentIcon}/>
         </div>
         
         <Likes likes={this.state.likes} likePost={this.likeToggle}/>
