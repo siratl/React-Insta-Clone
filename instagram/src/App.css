@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  max-width: 965px;
+  max-width: contain;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
 }

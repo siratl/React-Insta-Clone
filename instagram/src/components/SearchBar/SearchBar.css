@@ -6,7 +6,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 17px
+    padding: 0 315px;
+    padding-bottom: 17px;
+    background: white;
+    width: 100%;
 }
 
 .logoContainer {

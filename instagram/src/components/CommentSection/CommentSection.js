@@ -14,7 +14,7 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='commentWrapper'>
         {this.state.comments.map((comment, input) => {
           return <Comment key={input} comment={comment} />;
         })}
