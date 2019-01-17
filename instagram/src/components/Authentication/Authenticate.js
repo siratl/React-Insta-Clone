@@ -1,8 +1,7 @@
 import React from 'react';
 import ls from 'local-storage';
-import Login from '../Login/Login';
 
-const Authenticate = App =>
+const authenticate = App => Login =>
   class extends React.Component {
     constructor(props) {
       super(props);
@@ -11,18 +10,25 @@ const Authenticate = App =>
       };
     }
 
+    logout = ev => {
+      ev.preventDefault();
+      if (ls.get('user')) ls.remove('user');
+      this.setState({ loggedIn: false });
+    };
+
     componentDidMount() {
-      if (!ls.get('user')) {
-        this.setState({ loggedIn: false });
-      } else {
+      if (ls.get('user')) {
         this.setState({ loggedIn: true });
       }
     }
 
     render() {
-      if (this.setState.loggedIn) return <App />;
-      return <Login />;
+      return (
+        <div>
+          {this.state.loggedIn ? <App logout={this.logout} /> : <Login />}
+        </div>
+      );
     }
   };
 
-export default Authenticate;
+export default authenticate;

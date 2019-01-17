@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Moment from 'react-moment'
+import moment from 'moment'
 import { CardText } from 'reactstrap';
 import './CommentSection.css';
 
 const Timestamp = props => {
+    const thisDate = moment(props.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()
     return (
         <CardText>
             <small className="timestampText">
-                <Moment fromNow>{props.timestamp}</Moment>
+                <span>{thisDate}</span>
             </small> 
         </CardText> 
     )

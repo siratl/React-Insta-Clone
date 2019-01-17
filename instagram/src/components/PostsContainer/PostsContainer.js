@@ -5,44 +5,46 @@ import CommentSection from '../CommentSection/CommentSection';
 import './PostsContainer.css';
 
 const PostsContainer = props => {
-    return (
-      <div>
-        {props.posts.map (post => {
-          return (
-            <Card className="PostContainer">
+  return (
+    <div>
+      {props.posts.map(post => {
+        return (
+          <Card key={post.imageUrl} className="PostContainer">
             <CardBody>
-                <img className='headerThumb' src={post.thumbnailUrl} alt="User Thumbnail"/> 
-                <span className="headerUser">{post.username}</span>
+              <img
+                className="headerThumb"
+                src={post.thumbnailUrl}
+                alt="User Thumbnail"
+              />
+              <span className="headerUser">{post.username}</span>
             </CardBody>
 
-            <img className="postImage" src={post.imageUrl} alt="Posted Image" />
+            <img className="postImage" src={post.imageUrl} alt="Post here" />
 
             <CardBody>
-
-                <CommentSection 
-                    comments={post.comments}
-                    timestamp={post.timestamp}
-                    likes={post.likes}
-                />
-                
+              <CommentSection
+                comments={post.comments}
+                timestamp={post.timestamp}
+                likes={post.likes}
+              />
             </CardBody>
-        </Card>
-          )
-        })}
-        
-      </div>
-                  
-    );
-}
+          </Card>
+        );
+      })}
+    </div>
+  );
+};
 
 PostsContainer.propTypes = {
-    posts: PropTypes.arrayOf(PropTypes.shape({
-        username: PropTypes.string,
-        thumbnailUrl: PropTypes.string,
-        imageUrl: PropTypes.string,
-        likes: PropTypes.number,
-        timestamp: PropTypes.string,
-        comments: PropTypes.array,
-    }))
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      username: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+      imageUrl: PropTypes.string,
+      likes: PropTypes.number,
+      timestamp: PropTypes.string,
+      comments: PropTypes.array,
+    }),
+  ),
 };
 export default PostsContainer;

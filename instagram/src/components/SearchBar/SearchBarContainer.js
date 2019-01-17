@@ -1,9 +1,11 @@
 import React from 'react';
-import { Card, CardBody, CardTitle, CardText, Input } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardText, Input, Button } from 'reactstrap';
 import InstaLogo from '../../img/logo.png';
 import './SearchBar.css';
 
 const SearchBar = (props) => {
+
+  
     return (
         <Card>
             <CardBody className="searchBarWrapper">
@@ -17,9 +19,10 @@ const SearchBar = (props) => {
                     <i className="far fa-heart icons"></i>
                     <i className="far fa-user icons"></i>
                 </CardText>
+                <Button onClick={props.logout}> Logout </Button>
             </CardBody>
         </Card>
-    );
+    ); 
 }
 
 export default SearchBar;

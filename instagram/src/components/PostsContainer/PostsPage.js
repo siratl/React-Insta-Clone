@@ -5,10 +5,13 @@ import SearchBarContainer from '../SearchBar/SearchBarContainer';
 import './PostsContainer.css';
 
 class PostsPage extends Component {
-  constructor() {
-    super();
+  
+  constructor(props) {
+    
+    super(props);
     this.state = {
       posts: [],
+     
     };
   }
 
@@ -19,7 +22,7 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="PostsPage">
-        <SearchBarContainer />
+        <SearchBarContainer logout={this.props.logout} />
         <PostsContainer posts={this.state.posts} />
       </div>
     );

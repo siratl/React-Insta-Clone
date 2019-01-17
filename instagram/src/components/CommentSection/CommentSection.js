@@ -55,7 +55,7 @@ class CommentSection extends Component {
 
         <Comment comments={this.state.comments} />
 
-        <Timestamp timestamp={this.state.timestamp} />
+        <Timestamp timestamp={this.props.timestamp} />
 
         <CommentInput
           sumbit={this.addNewComment}

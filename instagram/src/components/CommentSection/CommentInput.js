@@ -19,8 +19,8 @@ const CommentInput = (props) => {
 
 CommentInput.propTypes = {
     value: PropTypes.string,  
-    onValueChange: PropTypes.func,
-    sumbit: PropTypes.func    
+    onChange: PropTypes.func,
+    onSumbit: PropTypes.func    
 };
 
 export default CommentInput;
