@@ -9,7 +9,7 @@ const Comments = props => {
       {props.comments.map(comment => {
         return (
             <CardText key={comment.text} className='commentText'>
-                <p className="username">{comment.username}</p>
+                <span className="username">{comment.username}</span>
                 {comment.text}
             </CardText>
         );
