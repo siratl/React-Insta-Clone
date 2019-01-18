@@ -1,0 +1,6 @@
+.App {
+  text-align: center;
+  max-width: contain;
+  display: flex;
+  flex-direction: column;
+}

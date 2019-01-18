@@ -1,0 +1,75 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+
+* {
+    box-sizing: border-box
+}
+
+.searchBarWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 315px;
+    padding-bottom: 17px;
+    background: white;
+    width: 100%;
+}
+
+.logoContainer .icons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 19.6%;
+    align-items: flex-end;
+    padding-top: 17px;
+}
+
+.logoContainer {
+    
+}
+
+
+.searchInput input {
+    border: 1px solid rgb(185, 185, 185);
+    width: 215px;
+    margin-top: 23px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.iconsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    width: 17.6%;
+    margin-left: 2.8%;
+
+}
+
+.cameraImg img{
+    width: 35px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.logoImg img {
+    width: 125px;
+    padding-left: 18px;
+    border-left: 1px solid black;
+
+}
+
+.icon img{
+    width: 33px;
+    margin-right: 10px;
+}
+
+.exploreIcon img{
+    width: 25px;
+    margin-right: 17px;
+    padding-bottom: 2px;
+}
