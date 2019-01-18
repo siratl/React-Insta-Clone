@@ -1,17 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, CardBody } from 'reactstrap';
+import { CardBody } from 'reactstrap';
 import CommentSection from '../CommentSection/CommentSection';
 import styled from 'styled-components';
 
 const PostPage = styled.div`
-  border: 1px solid green;
   width: 700px;
   margin: 0 auto;
+  border-radius: 4px;
+`;
+
+const Card = styled.div`
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px grey;
+
+  img {
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 7px;
+  }
 `;
 
 const CardBodyStyle = styled.div`
-  border: 1px solid red;
   padding: 15px 20px;
   display: flex;
   flex-direction: row;
@@ -25,9 +37,7 @@ const CardBodyStyle = styled.div`
 
   .headerUser {
     font-weight: 650;
-    border: 1px solid red;
-padding: 10px;
-  
+    padding: 10px;
   }
 `;
 

@@ -7,7 +7,6 @@ import styled from 'styled-components';
 const CardBodyStyle = styled.div`
   width: 100%;
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   padding: 10px 220px 5px 230px;
@@ -60,9 +59,9 @@ const CardBodyStyle = styled.div`
       margin-right: -5%;
 
       :hover {
-          color: white;
-          background: black;
-        }
+        color: white;
+        background: black;
+      }
     }
   }
 `;
@@ -77,7 +76,7 @@ const SearchBar = props => {
         </CardTitle>
         <Input className="searchInput" placeholder="&#xF002; Search" />
         <CardText className="iconsWrapper">
-          <i className="far fa-compass fa-lg   icons" />
+          <i className="far fa-compass fa-lg icons" />
           <i className="far fa-heart fa-lg icons" />
           <i className="far fa-user fa-lg icons" />
           <button className="btn" onClick={props.logout}>

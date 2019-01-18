@@ -7,7 +7,9 @@ import CommentInput from './CommentInput'
 import styled from 'styled-components';
 
 const CommentStyle = styled.div`
-border: 1px solid red;
+
+display: flex;
+flex-direction: column;
 `
 
 class CommentSection extends Component {
@@ -50,7 +52,7 @@ class CommentSection extends Component {
 
   render() {
     return (
-      <div className="commentWrapper">
+      <CommentStyle>
         <Likes
           likes={this.state.likes}
           liked={this.state.liked}
@@ -66,7 +68,7 @@ class CommentSection extends Component {
           value={this.state.inputText}
           onValueChange={this.handleChange}
         />
-      </div>
+      </CommentStyle>
     );
   }
 }

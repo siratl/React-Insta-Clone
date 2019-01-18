@@ -1,20 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CardText } from 'reactstrap';
-import './CommentSection.css';
+import styled from 'styled-components';
+
+const Div = styled.div`
+  width: 100%;
+  padding: 0;
+`;
+
+const CommentWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 4px 0;
+  font-weight: 450;
+`;
+
+const Span = styled.div`
+  padding-right: 10px;
+  font-weight: bold;
+`;
 
 const Comments = props => {
   return (
-    <div className='commentWrapper'>
+    <Div>
       {props.comments.map(comment => {
         return (
-            <CardText key={comment.text} className='commentText'>
-                <span className="username">{comment.username}</span>
-                {comment.text}
-            </CardText>
+          <CommentWrap key={comment.text}>
+            <Span>{comment.username}</Span>
+            {comment.text}
+          </CommentWrap>
         );
       })}
-    </div>
+    </Div>
   );
 };
 
