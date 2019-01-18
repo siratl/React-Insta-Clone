@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
-import Likes from './Likes'
+import Likes from './Likes';
 import Timestamp from './Timestamp';
-import CommentInput from './CommentInput'
+import CommentInput from './CommentInput';
 import styled from 'styled-components';
+import ls from 'local-storage';
 
 const CommentStyle = styled.div`
-
-display: flex;
-flex-direction: column;
-`
+  display: flex;
+  flex-direction: column;
+`;
 
 class CommentSection extends Component {
   constructor(props) {
@@ -38,14 +38,16 @@ class CommentSection extends Component {
 
   addNewComment = ev => {
     ev.preventDefault();
-
+    const user = ls.get('user');
     const newComments = {
-      username: 'sirATL',
+      username: user.username,
       text: this.state.inputText,
     };
     this.state.comments.push(newComments);
+    ls.set('comment', newComments);
+
     this.setState({
-      comments: this.state.comments,
+      newComments: ls.get('comment'),
       inputText: '',
     });
   };
