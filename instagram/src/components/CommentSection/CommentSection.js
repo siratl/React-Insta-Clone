@@ -4,7 +4,11 @@ import Comment from './Comment';
 import Likes from './Likes'
 import Timestamp from './Timestamp';
 import CommentInput from './CommentInput'
-import './CommentSection.css';
+import styled from 'styled-components';
+
+const CommentStyle = styled.div`
+border: 1px solid red;
+`
 
 class CommentSection extends Component {
   constructor(props) {

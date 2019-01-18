@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import PostsPage from './components/PostsContainer/PostsPage';
 import authenticate from './components/Authentication/authenticate';
 import Login from './components/Login/Login';
-import './App.css';
+import styled from 'styled-components';
+
+const AppStyled = styled.div`
+  width: 100%;
+  border: 1px solid red;
+  margin: 0 auto;
+`;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -11,9 +18,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppStyled>
         <PostsPage logout={this.props.logout} />
-      </div>
+      </AppStyled>
     );
   }
 }

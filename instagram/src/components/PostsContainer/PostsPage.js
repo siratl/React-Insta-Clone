@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import PostsContainer from './PostsContainer';
 import SearchBarContainer from '../SearchBar/SearchBarContainer';
-import './PostsContainer.css';
+
+
 
 class PostsPage extends Component {
-  
   constructor(props) {
-    
     super(props);
     this.state = {
       posts: [],
-     
     };
   }
 

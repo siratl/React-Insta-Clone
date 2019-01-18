@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ls from 'local-storage';
 import { Form, Input, Button } from 'reactstrap';
+import styled from 'styled-components';
 import './Login.css';
 
+const FormSomething = styled.div `
+width: 800px;
+`
 class Login extends Component {
   constructor() {
     super();
